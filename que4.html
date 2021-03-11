@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+    <head>
+        <script> 
+        let firstValue = null;
+        let secondValue = null;
+        let output = null;
+            function common(){
+             firstValue = document.getElementById("firstVal");
+             secondValue = document.getElementById("secondVal");
+             output = document.getElementById("result");
+
+            }
+            
+            function add(){
+                common();
+            
+                output.innerHTML = parseFloat(firstValue.value) + parseFloat(secondValue.value);
+
+            }
+            function subtract(){
+                common();
+                output.innerHTML = parseFloat(firstValue.value) - parseFloat(secondValue.value);
+
+            }
+            function multiply(){
+            common();
+                output.innerHTML = parseFloat(firstValue.value) * parseFloat(secondValue.value);
+
+            }
+        </script>
+        <title>
+            Calculator
+        </title>
+    </head>
+<body> <p>First value: <br>
+    <input type = "number" id = "firstVal"/>
+</p>
+    <P>Second value: <br>
+        <input type = "number" id = "secondVal"/> </P>
+    
+    <P>Operations: <br>
+        <input type ="button" onclick = "add()" value = "+"/>
+        <input type = "button" onclick = "subtract()" value = "-"/>
+        <input type = "button" onclick = "multiply()" value = "*"/>
+    </P>
+
+    Result:
+    <br>
+    <spam id ="result" ></spam>
+
+
+
+</body>
+    
+</html>
