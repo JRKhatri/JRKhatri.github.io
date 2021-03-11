@@ -28,21 +28,33 @@
                 output.innerHTML = parseFloat(firstValue.value) * parseFloat(secondValue.value);
 
             }
+            function divide(){
+                common();
+                output.innerHTML = parseFloat(firstValue.value) / parseFloat(secondValue.value);
+
+            }
+            
         </script>
         <title>
             Calculator
         </title>
     </head>
-<body> <p>First value: <br>
+<body style = "text-align:center"> 
+    <h2 style ="color : rgb(83, 7, 155)"> CALCULATOR</h2>
+    <p>First value: <br>
     <input type = "number" id = "firstVal"/>
 </p>
     <P>Second value: <br>
         <input type = "number" id = "secondVal"/> </P>
     
     <P>Operations: <br>
-        <input type ="button" onclick = "add()" value = "+"/>
+        <input  type="button"  onclick = "add()" value = "+"/>
         <input type = "button" onclick = "subtract()" value = "-"/>
         <input type = "button" onclick = "multiply()" value = "*"/>
+        <input type = "button" onclick = "divide()" value = "/"/>
+        <button onclick= "document.getElementById('firstVal').value ='', 
+        document.getElementById('secondVal').value ='',document.getElementById('result').innerHTML  = ''">AC </button>
+        
     </P>
 
     Result:
