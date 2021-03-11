@@ -1,0 +1,33 @@
+<!-- 3. Create and validate a well-formed HTML 5 document to produce output as shown in the picture below. 
+    Put this on your GitHub Pages site and put a link to it on your home page.
+a. When "Click to add" button is clicked, text typed inside input text field should be appended to the 
+ouput textarea and input field should be cleared. -->
+<!DOCTYPE HTML>
+<html lang ="en">
+    <head>
+        <script>
+           function appendText(){
+               let inputText = document.getElementById("input");
+               let outText = document.getElementById("output");
+               outText.value +=  inputText.value + " ";
+               inputText.value = "";
+            }
+
+        </script>
+        <title>
+            In Out
+        </title>
+    </head>
+    <body>
+        <p>Input: <br>
+            <input type ="text" id = "input"/>
+        </p>
+        Output: <br>
+        <textarea id = "output"></textarea> 
+        <br>
+        <input type = "button" value = "Click to add" onclick = "appendText()" />
+        
+        <p><a href=""https://validate.w3.org/check/referer">Validate</a></p>
+        
+    </body>
+</html>
