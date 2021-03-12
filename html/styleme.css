@@ -40,16 +40,25 @@ h1{
 
 }
 #fav{
+    text-decoration:underline;
     font-family:'Courier New', Courier, monospace;
     font-style:initial;
     font-weight: 600;
     line-height: 25px;
     font-size: 18px;
+    
 }
 #ol{
     font-family:'Courier New', Courier, monospace;
     font-style:initial;
-    font-weight: 600;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 20px;
+}
+#neigh{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style:initial;
+    font-weight: 400;
     line-height: 20px;
     font-size: 18px;
 

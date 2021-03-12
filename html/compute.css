@@ -1,0 +1,38 @@
+#body{
+    background-color: rgb(214, 220, 105);
+}
+#head{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 2px solid rgb(75, 6, 6);
+    background-color: rgb(172, 192, 231); 
+}
+#para{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size: 20px;
+   font-weight: bolder;
+   color: rgb(163, 9, 9);
+
+}
+#compute{
+    background-color: rgb(69, 181, 201);
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(196, 9, 46);
+    height: 50px;
+    width : 100px;
+
+}
+#result{
+    font-weight: bolder;
+    font-size: 25px;
+    color: rgb(93, 16, 156);
+
+}
+#clear{
+    background-color: rgb(226, 97, 151);
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(55, 9, 114);
+    height: 50px;
+    width : 100px;
+}

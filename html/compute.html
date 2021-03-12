@@ -2,9 +2,10 @@
  <!DOCTYPE HTML>
  <html lang = "en">
      <head>
+         <link href="compute.css" type = "text/css" rel ="stylesheet"></link>
          <script>
              function compute(){
-                 let userInput = document.getElementById("input").value;;
+                 let userInput = document.getElementById("input").value;
                  let splitInput = userInput.split(",");
                  let sum = sumFun(splitInput)
 
@@ -18,21 +19,34 @@
                      }
                      return sum;
                  }
-                }
-       
+             }
+         
          </script>
          <title>Compute</title>
      </head>
-     <body>
-         Enter values commma separated: <br>
-         <textarea id = "input"></textarea> </textarea>
-         <br>
-         <button onclick = "compute()" >Compute</button>
-         <br>
-         Sum:
-         <span id = "sum"></span> <br>
-         Average:
-         <span id = "average"></span>
-
+     <body id = "body" style = "text-align:center" >
+         <h1 id = "head">Sum & Average Finder</h1>
+         <p id = "para">
+         Enter values separated by commma: 
+        </p>
+         <textarea id = "input" style="font-size:12;" rows="18" cols="50"></textarea> </textarea>
+         
+         <p>
+         <button id ="compute"  onclick = "compute()" >Compute</button>
+         
+        </p>
+         <p id = "result">
+            Sum:
+            <span class = "span" id = "sum"></span> <br>
+            Average:
+            <span class = "span" id = "average"></span>
+        </p>
+            <p >
+            <button id ="clear" onclick= "document.getElementById('sum').innerHTML  = '', document.getElementById('average').innerHTML  = '', document.getElementById('input').value =''">Clear</button>
+            </p>
+         
+            
+         
+         
      </body>
  </html>
