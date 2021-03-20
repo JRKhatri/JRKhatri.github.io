@@ -62,7 +62,7 @@ function displayResult(val){
             spanReport.className="yellow";
             return cat;
         } else if(val < 24.9){
-            cat += "Normal."+"<br>" + "BMI Value range:- 18.5 to 24.9.";
+            cat += "Healthyweight."+"<br>" + "BMI Value range:- 18.5 to 24.9.";
             spanReport.className="green";
             return cat;
         } else if(val < 29.9){
