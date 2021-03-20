@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang ="en-us">
+    <head>
+        <link href="main.css" type="text/css" rel="stylesheet" >
+        <script src="main.js" type="text/javascript"></script>
+        
+        
+        <title>
+            Know Your Health
+        </title>
+    </head>
+    <body>
+        
+        <div id="logoPara"> <img  src ="logoImage.jpeg" width = "80px" height="80px" /> Health and Healthy Life.</div>
+        <div class="rightFloat">
+         <input  id="searchTxt" type= "text" > <button id="butSearch">Search </button> </div>
+        
+            
+        <p>
+    <div id="titlePara">
+        "Know Your Health" ....."Live Healthy Life" 
+    </div>
+</p>
+<div id="personalInfo"> <fieldset >
+    <legend>Personal Information</legend>
+    <label for="fname">First name :</label>
+    <input type="text" id="fname" name="fname"/><br>
+    <label for="lname">Last name :</label>
+    <input type="text" id="lname" name="lname"/> <br>
+  <!--  <label for="email">Email :</label>
+    <input type="email" id="email" name="email"/><br> // not in use for now-->
+  <!-- <label for="birthday">Birthday :</label>
+    <input type="date" id="birthday" name="birthday"/> // not in use for now--> 
+    <button id="del">Clear</button>
+</fieldset>
+</div>
+       
+
+        <div><h3> <u>About BMI</u></h3>
+            <p>BMI indicates body mass index. It is a screening method to know the status of weight relative to the height.
+                BMI is calculated by weight of person in kilogram(kg) divided by the square of height measured in meter(㎡). </p>
+           <p> BMI method catogrize the weight of person relative to thier height in Underweight, Healthyweight, Overweight and Obesity.</p>
+           <p>This calculator provides body mass index (BMI) and the corresponding BMI weight status category for adults 20 years and older.</p>
+        </div>
+        
+        <div class="field">
+            <fieldset  id="bmiCal">
+            <h3><u>BMI Calculator</u></h3>
+            <label for="height" >Height : Meters</label> <br>
+            <input type="number" id="height" name="height"> <br>
+            <label for="weight" > Weight : Kilograms</label> <br>
+            <input type ="number" id="weight" name ="weight"> <br><br>
+            <button id="butBmi">Calculate</button> 
+            <button id="clear">Clear</button>
+        </fieldset>
+    
+
+    
+        <fieldset  id="bmiResult">
+            <h3> <u>BMI Result</u></h3>
+            <label for="bmiResult" >Your BMI Value :</label> <br>
+           <div><span  id="spanResult" name="result"></span></div> <br> <br>
+            <button id="butDescription">Description</button> 
+            
+
+    
+                
+        </fieldset>
+    
+        <fieldset  id="bmiReport">
+            <h3><u>Report</u></h3>
+            <span id="report"></span> <br>
+            <div id="link">
+            For more info click: <br>
+            <a href="https://www.cdc.gov/healthyweight/assessing/bmi/">BMI Info</a>
+            <div>
+        </fieldset>
+    </div>
+
+        
+
+    </body>
+    
+</html>
