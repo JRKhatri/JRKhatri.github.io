@@ -1,3 +1,4 @@
+
 function pageLoad(){
     document.getElementById("butBmi").onclick =bmiCalculation;
     document.getElementById("clear").onclick = clear;
@@ -58,19 +59,19 @@ function displayResult(val){
        function categories(val){
            let cat =  "BMI Category:- "
         if(val < 18.5){
-            cat +=  "Underweight" +"<br>" + "BMI value range:- Less than 18.5.";
+            cat +=  "Underweight." +"<br>" + "BMI value range:- Less than 18.5.";
             spanReport.className="yellow";
             return cat;
         } else if(val < 24.9){
-            cat += "Normal"+"<br>" + "BMI Value range:- 18.5 to 24.9";
+            cat += "Healthyweight."+"<br>" + "BMI Value range:- 18.5 to 24.9.";
             spanReport.className="green";
             return cat;
         } else if(val < 29.9){
-           cat += "Overweight" +"<br>" + "BMI value range:- 25 to 29.9";
+           cat += "Overweight." +"<br>" + "BMI value range:- 25 to 29.9.";
            spanReport.className="orange";
            return cat;
         } else {
-            cat +="Obese" +"<br>" + "BMI value range:- 30 or greater";
+            cat +="Obese." +"<br>" + "BMI value range:- 30 or greater.";
             spanReport.className="red";
             return cat;
         }
