@@ -84,7 +84,7 @@ function displayResult(val){
         let fname=document.getElementById("fname");
         let lname= document.getElementById("lname");
         let bmidata= document.getElementById("spanResult");
-        if(fname.value === ""||lname.value ===""||bmidata.innerHTML==="NaN"||bmidata.innerHTML===""){
+        if(fname.value === ""||lname.value ===""||bmidata.innerHTML==="NaN"||bmidata.innerHTML===""||bmidata.innerHTML==="0"||bmidata.innerHTML==="Infinity"){
             alert("Information Missing!")
             return false;
         }
