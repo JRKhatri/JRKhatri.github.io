@@ -73,6 +73,7 @@ function displayResult(val){
             cat +="Obese." +"<br>" + "BMI value range:- 30 or greater.";
             spanReport.className="red";
             return cat;
+        
         }
     }
     }
