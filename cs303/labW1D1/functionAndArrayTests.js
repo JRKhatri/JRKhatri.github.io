@@ -10,12 +10,13 @@ describe("maxOfThree", function () {
         assert.strictEqual(maxOfThree(3, 2, 1), 3);
     });
     it("tests -1 -2 -3", function () {
-        assert.strictEqual(maxOfThree(-1, -2, -3), 3);
+        assert.strictEqual(maxOfThree(-1, -2, -3), -1);
     });
 });
 
 /*
-2.	Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10,
+2.	Define a function sum() and a function multiply() that sums and multiplies
+ (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10,
  and multiply([1,2,3,4]) should return 24. 
  */
 describe("sum and multiply", function () {
