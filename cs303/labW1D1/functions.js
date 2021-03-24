@@ -174,3 +174,4 @@ const studentAnswers = [[1, 1, 2], [2, 1, 2], [3, 1, 3]];
 const correctAnswers = [3, 1, 2]; 
 console.log(scoreExams(studentAnswers, correctAnswers));// [2, 2, 2]
 
+
