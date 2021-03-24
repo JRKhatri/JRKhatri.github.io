@@ -1,5 +1,5 @@
 "use strict";
-/*global assert   Calculator*/
+/*global assert Accumulator  Calculator*/
 /* 
 const assert = require("assert");  //always need this with node
 const myExports = require("./calculator.js");  //with node need the name of your file with your functions here
