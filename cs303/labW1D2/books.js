@@ -176,13 +176,10 @@ function getBookID(){
 }
 
 
-
-
-
 window.onload = pageLoad;
 
 
-
+//module.exports ={findTitles,findAuthors,findIDs};
 
  /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
 

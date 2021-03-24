@@ -25,22 +25,22 @@ describe("library", function () {
 
 
     it("find titles", function () {
-        assert.deepEqual(findTitles(), titles);
+        assert.strictEqual(findTitles(), titles);
     });
 
     it("find authors", function () {
-        assert.deepEqual(findAuthors(), authors);
+        assert.strictEqual(findAuthors(), authors);
     });
 
     it("find ids", function () {
-        assert.deepEqual(findIDs(), authors);
+        assert.strictEqual(findIDs(), authors);
     });
 
     it("add book", function () {
         const newBook = {title: "My New Book", author: "Me Too", libraryID: 1144};
         const newIDs = ids.push(1144);
-        assert.deepEqual(addBook(newBook), newBook);
-        assert.deepEqual(findIDs(), newIDs);
+        assert.strictEqual(addBook(newBook), newBook);
+        assert.strictEqual(findIDs(), newIDs);
     });
 
 });
