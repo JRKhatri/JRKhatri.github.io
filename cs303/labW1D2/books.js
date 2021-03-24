@@ -10,7 +10,7 @@ let library = [
  * 
  */
 function pageLoad(){
-     document.getElementById("addBook").onclick = addBrowserBook;
+     document.getElementById("addBook").onclick = addBrowserBook();
 
     document.getElementById("titlesBtn").onclick = findTitles;
     
