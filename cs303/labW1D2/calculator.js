@@ -34,4 +34,4 @@ console.log(calc);
 console.log( "expect 15 : ", calc.sum() ); 
 console.log("expect 50 : ", calc.mul() );
 
-//module.exports = {Calculator};
+module.exports = {Calculator};

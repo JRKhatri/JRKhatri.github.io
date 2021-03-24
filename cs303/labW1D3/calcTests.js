@@ -3,8 +3,6 @@
 /* global assert Calculator */
 
 
-
-
 describe("calculator from constructor function", function () {
     let calc;  
     before(function () {
