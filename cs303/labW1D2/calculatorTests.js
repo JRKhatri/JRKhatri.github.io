@@ -1,27 +1,28 @@
 "use strict";
-/* global assert calculator */
+/**global assert Accumulator  Calculator*/
+/* */
+const assert = require("assert");  //always need this with node
+const myExports = require("./calculator.js");  //with node need the name of your file with your functions here
+//const Accumulator = myExports.Accumulator;  //do this for all of the functions used in the Mocha tests
+const Calculator = myExports.Calculator;  //do this for all of the functions used in the Mocha tests
 
 
-
-
-
-describe("new calculator", function () {
- 
-
-    it("checks initial values 2 and 3", function () {
-        assert.strictEqual(calculator.a, 2);
-        assert.strictEqual(calculator.b, 3);
+describe("calculator from constructor function", function () {
+    let calc;  
+    before(function () {
+        calc = new Calculator();
+        calc.setValues(2, 3);
     });
 
-    it("when 2 and 3 are entered, the sum is 5", function () {
-        assert.strictEqual(calculator.sum(), 5);
+    it("when 20 and 30 are entered, the sum is 50", function () {
+        assert.strictEqual(calc.a, 20);
+        assert.strictEqual(calc.b, 30);
+        assert.strictEqual(calc.sum(), 50);
     });
 
-    it("when 2 and 3 are entered, the product is 6", function () {
-        assert.strictEqual(calculator.mul(), 6);
+    it("when 20 and 30 are entered, the product is 600", function () {
+        assert.strictEqual(calc.a, 20);
+        assert.strictEqual(calc.b, 30);
+        assert.strictEqual(calc.mul(), 600);
     });
-
-
 });
-
-

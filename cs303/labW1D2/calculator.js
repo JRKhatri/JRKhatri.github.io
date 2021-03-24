@@ -6,20 +6,31 @@
     mul() multiplies saved values and returns the result.
 */
 
-let calculator = {
-    value1: 0,
-    value2: 0,
-  getValues: function(operand1, operand2){
+let calc = new Calculator();
+
+calc.setValues(20,30);
+
+function Calculator(){
+    value1 =0;
+    value2 =0;
+
+  this.setValues = function(operand1, operand2){
       this.value1 = operand1;
       this.value2 = operand2;
-  },
-  sum: function(){
+  };
+  this.sum = function(){
       const tot = this.value1 + this.value2;
       return tot;
-  },
-  mul: function(){}
+  };
+  this.mul= function(){
+      const product = this.value1 * this.value2;
+      return product;
+  };
 };
 
-calculator.getValues(5, 10);
-console.log( "expect 15 : ", calculator.sum() ); 
-console.log("expect 50 : ", calculator.mul() );
+
+console.log(calc);
+console.log( "expect 15 : ", calc.sum() ); 
+console.log("expect 50 : ", calc.mul() );
+
+module.exports = {Calculator};
