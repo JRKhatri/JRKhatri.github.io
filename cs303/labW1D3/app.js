@@ -44,4 +44,5 @@ let accumulator = new Accumulator(5,10);
       return product;
   };
 }
+let calculator = new Calculator();
      

@@ -7,12 +7,12 @@
 */
 
 let calc = new Calculator();
-
-calc.setValues(20,30);
-
+/**
+ * @return{Object} calulator constructor;
+ */
 function Calculator(){
-    value1 =0;
-    value2 =0;
+    this.value1 =0;
+    this.value2 =0;
 
   this.setValues = function(operand1, operand2){
       this.value1 = operand1;
@@ -26,8 +26,9 @@ function Calculator(){
       const product = this.value1 * this.value2;
       return product;
   };
-};
+}
 
+calc.setValues(20,30);
 
 console.log(calc);
 console.log( "expect 15 : ", calc.sum() ); 
