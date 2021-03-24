@@ -9,16 +9,16 @@ let library = [
 /**
  * 
  */
-// function pageLoad(){
-//      document.getElementById("addBook").onclick = addBrowserBook;
+function pageLoad(){
+     document.getElementById("addBook").onclick = addBrowserBook;
 
-//     document.getElementById("titlesBtn").onclick = findTitles;
+    document.getElementById("titlesBtn").onclick = findTitles;
     
-//     document.getElementById("authorBtn").onclick = findAuthors;
-//     document.getElementById("idsBtn").onclick = findIDs;
-//     document.getElementById("allBtn").onclick = displayAll;
+    document.getElementById("authorBtn").onclick = findAuthors;
+    document.getElementById("idsBtn").onclick = findIDs;
+    document.getElementById("allBtn").onclick = displayAll;
 
-// }
+}
 
 // eslint-disable-next-line valid-jsdoc
 /**
@@ -33,7 +33,7 @@ function addBrowserBook(){
     addBook(newBook);
     let textArea = document.getElementById("displayArea");
      textArea.innerHTML = "Book Added. Thanks!";
-     //clearInput();
+     clearInput();
     
     return;
      
@@ -43,12 +43,12 @@ function addBrowserBook(){
  /**
   * 
   */
-//  function clearInput(){
-//      document.getElementById("title").value ="";
-//     document.getElementById("author").value ="";
-//      document.getElementById("id").value ="";
-//    return;
-//  }
+ function clearInput(){
+     document.getElementById("title").value ="";
+    document.getElementById("author").value ="";
+     document.getElementById("id").value ="";
+   return;
+ }
  
  /**
   * 
@@ -179,7 +179,7 @@ function getBookID(){
 
 
 
-//window.onload = pageLoad;
+window.onload = pageLoad;
 
 
 //module.exports ={findTitles,findAuthors,findIDs};
