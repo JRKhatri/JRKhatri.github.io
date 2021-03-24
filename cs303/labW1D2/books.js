@@ -9,16 +9,16 @@ let library = [
 /**
  * 
  */
-function pageLoad(){
-     document.getElementById("addBook").onclick = addBrowserBook;
+// function pageLoad(){
+//      document.getElementById("addBook").onclick = addBrowserBook;
 
-    document.getElementById("titlesBtn").onclick = findTitles;
+//     document.getElementById("titlesBtn").onclick = findTitles;
     
-    document.getElementById("authorBtn").onclick = findAuthors;
-    document.getElementById("idsBtn").onclick = findIDs;
-    document.getElementById("allBtn").onclick = displayAll;
+//     document.getElementById("authorBtn").onclick = findAuthors;
+//     document.getElementById("idsBtn").onclick = findIDs;
+//     document.getElementById("allBtn").onclick = displayAll;
 
-}
+// }
 
 // eslint-disable-next-line valid-jsdoc
 /**
@@ -98,10 +98,10 @@ function getAllContent(){
  */
 function findTitles() {
   let titles = showTitle();
-  const titleString = titles.join("\n");
-  let textArea = document.getElementById("displayArea");
-  textArea.innerHTML= titleString;
-  return;
+//   const titleString = titles.join("\n");
+//   let textArea = document.getElementById("displayArea");
+//   textArea.innerHTML= titleString;
+  return titles;
 }
 
 // eslint-disable-next-line valid-jsdoc
@@ -127,11 +127,11 @@ function findTitles() {
  */
 function findAuthors(){
     let authors = getAuthors();
-    const authorString = authors.join("\n") ;
-    let textArea = document.getElementById("displayArea");
-    textArea.innerHTML = authorString;
+    // const authorString = authors.join("\n") ;
+    // let textArea = document.getElementById("displayArea");
+    //textArea.innerHTML = authorString;
     
-    return;
+    return authors;
 }
 
 // eslint-disable-next-line valid-jsdoc
@@ -142,7 +142,7 @@ function findAuthors(){
 function getAuthors(){
     let authorArray =[];
     for(let element of library ){
-       authorArray.push(element.author)
+       authorArray.push(element.author);
             }
         authorArray.sort();
         return authorArray;
@@ -155,9 +155,9 @@ function getAuthors(){
  */
 function findIDs(){
     let bookIds = getBookID();
-    const idString = bookIds.join("\n");
-    document.getElementById("displayArea").innerHTML= idString;
-    return;
+    // const idString = bookIds.join("\n");
+    // document.getElementById("displayArea").innerHTML= idString;
+    return bookIds;
 
 }
 
@@ -169,17 +169,17 @@ function findIDs(){
 function getBookID(){
     let ids =[];
     for(let element of library){
-        ids.push(element.libraryID)
+        ids.push(element.libraryID);
             }
         ids.sort();
     return ids;
 }
 
 
-window.onload = pageLoad;
+//window.onload = pageLoad;
 
 
-//module.exports ={findTitles,findAuthors,findIDs};
+module.exports ={findTitles,findAuthors,findIDs};
 
  /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
 
