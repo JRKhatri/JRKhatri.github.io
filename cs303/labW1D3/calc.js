@@ -1,4 +1,4 @@
-"use strict"
+("use strict");
 
 /**
  * @returns {Object} this is a constructor function
@@ -21,4 +21,10 @@
   };
 }
 let calc = new Calculator();
+console.log(calc);
+calc.setValues(5,10);
+console.log(calc);
+console.log(calc.sum());
+console.log(calc.mul());
+
   
