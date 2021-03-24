@@ -3,7 +3,7 @@
 /**
  * 
 
- * @returns {Accumulator} constructor function
+ * @returns {Accumulator} constructor function;
  */
 function Accumulator(initialValue, increment){
     this.currentValue = initialValue;

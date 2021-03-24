@@ -12,14 +12,14 @@ describe("calculator from constructor function", function () {
     });
 
     it("when 2 and 3 are entered, the sum is 50", function () {
-        assert.strictEqual(calc.a, 20);
-        assert.strictEqual(calc.b, 30);
-        assert.strictEqual(calc.sum(), 50);
+        assert.deepEqual(calc.a, 20);
+        assert.deepEqual(calc.b, 30);
+        assert.deepEqual(calc.sum(), 50);
     });
 
     it("when 20 and 30 are entered, the product is 600", function () {
-        assert.strictEqual(calc.a, 20);
-        assert.strictEqual(calc.b, 30);
-        assert.strictEqual(calc.mul(), 600);
+        assert.deepEqual(calc.a, 20);
+        assert.deepEqual(calc.b, 30);
+        assert.deepEqual(calc.mul(), 600);
     });
 });
