@@ -33,7 +33,7 @@ function addBrowserBook(){
     addBook(newBook);
     let textArea = document.getElementById("displayArea");
      textArea.innerHTML = "Book Added. Thanks!";
-     clearInput();
+     //clearInput();
     
     return;
      
@@ -43,12 +43,12 @@ function addBrowserBook(){
  /**
   * 
   */
- function clearInput(){
-     document.getElementById("title").value ="";
-    document.getElementById("author").value ="";
-     document.getElementById("id").value ="";
-   return;
- }
+//  function clearInput(){
+//      document.getElementById("title").value ="";
+//     document.getElementById("author").value ="";
+//      document.getElementById("id").value ="";
+//    return;
+//  }
  
  /**
   * 
