@@ -11,19 +11,19 @@ let calc = new Calculator();
  * @return{Object} calulator constructor;
  */
 function Calculator(){
-    this.value1 =0;
-    this.value2 =0;
+    this.a =0;
+    this.b =0;
 
   this.setValues = function(operand1, operand2){
-      this.value1 = operand1;
-      this.value2 = operand2;
+      this.a = operand1;
+      this.b = operand2;
   };
   this.sum = function(){
-      const tot = this.value1 + this.value2;
+      const tot = this.a + this.b;
       return tot;
   };
   this.mul= function(){
-      const product = this.value1 * this.value2;
+      const product = this.a * this.b;
       return product;
   };
 }
@@ -31,7 +31,7 @@ function Calculator(){
 calc.setValues(20,30);
 
 console.log(calc);
-console.log( "expect 15 : ", calc.sum() ); 
-console.log("expect 50 : ", calc.mul() );
+console.log( calc.sum() ); 
+console.log( calc.mul() );
 
 //module.exports = {Calculator};
