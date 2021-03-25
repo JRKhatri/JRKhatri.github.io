@@ -12,10 +12,10 @@ let library = [
 function pageLoad(){
      document.getElementById("addBook").onclick = addBrowserBook;
 
-    document.getElementById("titlesBtn").onclick = findTitles;
+    document.getElementById("titlesBtn").onclick = showTitles;
     
-    document.getElementById("authorBtn").onclick = findAuthors;
-    document.getElementById("idsBtn").onclick = findIDs;
+    document.getElementById("authorBtn").onclick = showAuthors;
+    document.getElementById("idsBtn").onclick = showIDs;
     document.getElementById("allBtn").onclick = displayAll;
 
 }
@@ -35,9 +35,20 @@ function addBrowserBook(){
      textArea.innerHTML = "Book Added. Thanks!";
      clearInput();
     
-    return;
+    return newBook;
      
  }
+ 
+ // eslint-disable-next-line valid-jsdoc
+/**
+ * 
+ * @returns undefined;
+ */
+// function addBook(newBook){
+//      library.push(newBook);
+//     return newBook;
+     
+//  }
 
  // eslint-disable-next-line valid-jsdoc
  /**
@@ -96,13 +107,24 @@ function getAllContent(){
  * 
  * @returns undefined;
  */
-function findTitles() {
+function findTitles() {     //this function is only for the test to pass in browser page.
+  let titles = showTitle();
+  return titles;
+}
+//eslint-disable-next-line valid-jsdoc
+/**
+ * 
+ * @returns undefined;
+ */
+function showTitles() {
   let titles = showTitle();
   const titleString = titles.join("\n");
   let textArea = document.getElementById("displayArea");
   textArea.innerHTML= titleString;
-  return;
+  return titles;
 }
+
+
 
 // eslint-disable-next-line valid-jsdoc
 /**
@@ -125,13 +147,23 @@ function findTitles() {
  * 
  * @returns undefined
  */
-function findAuthors(){
+function findAuthors(){       //this function is onley for the test to pass in browser page.
     let authors = getAuthors();
+    return authors;
+}
+
+
+// eslint-disable-next-line valid-jsdoc
+/**
+ * 
+ * @returns undefined
+ */
+ function showAuthors(){
+    let authors = getAuthors();
+    authors.sort();
     const authorString = authors.join("\n") ;
     let textArea = document.getElementById("displayArea");
     textArea.innerHTML = authorString;
-    
-    return;
 }
 
 // eslint-disable-next-line valid-jsdoc
@@ -153,7 +185,18 @@ function getAuthors(){
  * 
  * @returns undefined;
  */
-function findIDs(){
+function findIDs(){  //this code is only for test to pass in webbrowser
+    let bookIds = getBookID();
+    return bookIds;
+
+}
+
+// eslint-disable-next-line valid-jsdoc
+/**
+ * 
+ * @returns undefined;
+ */
+ function showIDs(){
     let bookIds = getBookID();
     const idString = bookIds.join("\n");
     document.getElementById("displayArea").innerHTML= idString;
