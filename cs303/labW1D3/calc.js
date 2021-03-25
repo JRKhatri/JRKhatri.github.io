@@ -1,26 +1,31 @@
 ("use strict");
 
+let calc = new Calculator();
+
 /**
  * @returns {Object} this is a constructor function
  */
  function Calculator(){
-    this.value1 =0;
-    this.value2 =0;
+    this.a =0;
+    this.b =0;
 
   this.setValues = function(operand1, operand2){
-      this.value1 = operand1;
-      this.value2 = operand2;
+      this.a = operand1;
+      this.b = operand2;
   };
   this.sum = function(){
-      const tot = this.value1 + this.value2;
+      const tot = this.a + this.b;
       return tot;
   };
   this.mul= function(){
-      const product = this.value1 * this.value2;
+      const product = this.a * this.b;
       return product;
   };
 }
-let calc = new Calculator();
+
+
+
+
 console.log(calc);
 calc.setValues(5,10);
 console.log(calc);
