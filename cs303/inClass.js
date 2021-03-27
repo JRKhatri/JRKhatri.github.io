@@ -103,5 +103,56 @@ const numbers =[1,5,18,2,77,108];
 // the first even numbers
 // the index of first even numbber
 
-let isEven = num => num % 2 === 0;
-console.log(isEven(3));
+// let name = "Jyoti";
+// console.log(name.substr(0)); //Jyoti
+// console.log(name.substr(1));  //yoti
+// console.log(name.substr(1,3)); //yot
+// console.log(name.substr(3,1)); // t
+// console.log(name); //Jyoti
+// let x = "120&$$$$";
+// console.log(parseInt(x));
+
+// console.log(+"113"===Number("123"));
+
+// let lengths =["name", "address","country"].filter(
+//     function(element, index ,arr){
+//         const newItem = ""+index + ":" + element.length + "array is :" + arr;
+//         return newItem;
+//     }
+// )
+
+// console.log(lengths);
+
+// let arr =[1,2,3,4,5];
+// let result = arr.reduce(function(preValue, item){
+//     return preValue + item;
+// }, 0); 
+// // or result2 = arr.reduce((sum,current) => sum + current,0);
+
+// let resultMax = arr.reduce(function(preValue, item){return Math.max(preValue, item);},0);
+// console.log(resultMax);
+
+
+//console.log(isNaN("a"));
+
+let users = [
+    {id: 'john', name: "John Smith", age: 20},
+    {id: 'ann', name: "Ann Smith", age: 24},
+    {id: 'pete', name: "Pete Peterson", age: 31},
+  ];
+//console.log(users[1]);
+//   assert.deepEqual(groupById(users), {
+//     john: {id: 'john', name: "John Smith", age: 20},
+//     ann: {id: 'ann', name: "Ann Smith", age: 24},
+//     pete: {id: 'pete', name: "Pete Peterson", age: 31},
+//   });
+
+
+let sat = users.reduce(function(item){
+      l
+      obj[item.id]=item;
+      console.log(obj);
+      
+    }
+
+);

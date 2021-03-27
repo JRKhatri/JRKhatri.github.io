@@ -56,19 +56,20 @@ function getMaxSubSum(arr) {
 
 
 function camelize(str) {
-  //-webkittransition
+  
   let word=str;
   let pos = -1;
+  let cap;
   while((pos= word.indexOf("-",pos +1))!= -1){
     if(pos===0){
-    let uper = word.charAt(pos+1);
-    word =  uper.toUpperCase() + word.substr(2);
+     cap = word.charAt(pos+1);
+    word =  cap.toUpperCase() + word.substr(2);
     } else{
-      let uper =word.charAt(pos+1);
+       cap =word.charAt(pos+1);
       let  preWord = word.substr(0,pos);
       let postWord = word.substr(pos+2,word.length-1)
       
-      word = preWord+ uper.toUpperCase()+postWord ;
+      word = preWord+ cap.toUpperCase()+postWord ;
 
     }
     
@@ -78,4 +79,4 @@ function camelize(str) {
   
 
 
-console.log(camelize("-webkit-he-llo-Mydear-"))
+console.log(camelize("-webkit-hello-Mydear-"))
