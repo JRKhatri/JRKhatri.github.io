@@ -148,11 +148,168 @@ let users = [
 //   });
 
 
-let sat = users.reduce(function(item){
-      l
-      obj[item.id]=item;
-      console.log(obj);
+// let sat = users.reduce(function(item){
+//       l
+//       obj[item.id]=item;
+//       console.log(obj);
       
+//     }
+
+// );
+
+// const array123 = [1, 2, 3,4,5,6,7] 
+
+
+
+// let result2 = array123.reduce((sum,current) => sum + current,0);
+
+
+
+// let sumOf = array123.reduce(function(sum , current){
+//   return sum + current;
+// }, 0);
+
+// console.log(sumOf);
+
+let team =["Bob", "Jim", "Tim"];
+//  const [bob,jim, tim] = team;
+//  console.log(jim);
+
+//  const team1 ={point: "Bob", shooting:"Fred",power:"Jim"};
+//  const{point, shooting, power} = team1;
+//  console.log(point,shooting,power);
+// let team1 =["Bob", "Jim", "Tim"];
+//  console.log(team1.splice(0,0));
+//  console.log(team1);
+//  console.log(team1.splice(0,1));
+//  console.log(team1);
+//  console.log(team1.splice(1,1));
+//  console.log(team1);
+
+ 
+
+//  let array4 =[1 , 2 , 3 ];
+//   let sum = 0;
+//   let indexSum = 0;
+//  let result = array4.forEach((item, index)=> {
+//     sum +=  item;
+//     indexSum += index;
+//    return sum;
+//  });
+//  console.log(sum);
+//  console.log(indexSum)
+//  console.log(result);
+
+//  let array5 =["Morning",5, 10,20,30 ,10, "hello" ];
+
+//  let aaa = array5.find((item)=> item==="hello");
+//  console.log(aaa);
+
+//  let arrObject = [
+//    {class:301, subject: "Intro to JavaScript"},
+//    {class:303, subject:"OO in JavaScript"},
+//    {class:201, subject: "Intro to Java"}
+//  ];
+// let result = arrObject.find((item, index) => {item.class===301; console.log(item.subject);});
+// console.log(result);
+// let users1 = [
+//   {id: 1, name: "John"},
+//   {id: 2, name: "Pete"},
+//   {id: 3, name: "Mary"},
+//   {id:4, name: "Pete"}
+// ];
+
+// let user = users1.map(item => item.id === 1);
+
+// console.log(user);
+// console.log(user.id);
+// console.log(user[0]);
+// console.log(user.length);
+
+
+// let countries = ['Österreich', 'Andorra', 'Vietnam'];
+
+// console.log( countries.sort( (a, b) => a > b ? 1 : -1) ); 
+
+// console.log( countries.sort( (a, b) => a.localeCompare(b) ) );
+
+// function myMap(arr, fun){
+//  let bbb = arr.map(fun);
+//  return bbb;
+// }
+// function someFunc(aaa){
+// return aaa.length;
+// }
+// let arrO =["happy", "birthday","to", "you"];
+// console.log(myMap(arrO,someFunc));
+
+
+"use strict";
+/* eslint-disable */
+/* Write code that measures how long it takes to find the maximal subarray for an array that has 10 elements and another 
+that has 100 elements using first the O(n) solution and then the O(n**2) solution.
+*/
+
+function getMaxSubSumSlow(arr) {
+    let maxSum = 0; // if we take no elements, zero will be returned
+
+    for (let i = 0; i < arr.length; i++) {
+        let sumFixedStart = 0;
+        for (let j = i; j < arr.length; j++) {
+            sumFixedStart += arr[j];
+            maxSum = Math.max(maxSum, sumFixedStart);
+        }
     }
 
-);
+    return maxSum;
+}
+
+function getMaxSubSum(arr) {
+    let maxSum = 0;
+    let partialSum = 0;
+
+    for (let item of arr) { // for each item of arr
+        partialSum += item; // add it to partialSum
+        maxSum = Math.max(maxSum, partialSum); // remember the maximum
+        if (partialSum < 0) partialSum = 0; // zero if negative
+    }
+
+    return maxSum;
+}
+
+function makeArray(n) {
+    const arr = [];
+    for (let i = 0; i <= n; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+const arr10 = makeArray(10);
+const arr100 = makeArray(100);
+
+let start = Date.now(); // milliseconds count from 1 Jan 1970
+// do the job
+for (let i = 0; i < 100000; i++) {
+  let doSomething = i * i * i;
+}
+let end = Date.now(); // done
+console.log( `The loop took ${end - start} ms` ); // subtract numbers, not dates
+
+console.log(Date.now())
+
+
+
+let peopleArray = [{ name: "Sam", age: 15 }, { name: "William", age: 6 }, 
+{ name: "Lucy", age: 13 }, { name: "Barney", age: 80 }];
+function doublesAges(arr){
+  return arr.filter((element) => { return element["age"]>10;
+}  
+  )  
+}
+ console.log(doublesAges(peopleArray)); 
+ console.log(peopleArray)
+
+ let numArray = [5, 0, 7, 77, -20, 300, 51, 2];
+
+ numArray.includes()
+
