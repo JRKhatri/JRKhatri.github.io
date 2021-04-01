@@ -1,10 +1,10 @@
 ("use strict");
 /*• Sum all numbers till the given one */
-function allSum(num){
+function sumTo(num){
     if(num === 0){
         return 0
     } else {
-        return num + allSum(num -1);
+        return num + sumTo(num -1);
     }
 
 }
@@ -14,7 +14,7 @@ console.log(allSum(0));
 
 /*Calculate factorial*/
 
-function calcFactorial(num){
+function factorial(num){
     if(num < 0){
         return num;
     }
@@ -24,7 +24,7 @@ function calcFactorial(num){
     if(num === 1){
         return 1;
     } else {
-        return num * calcFactorial(num -1);
+        return num * factorial(num -1);
     }
 }
 
@@ -35,14 +35,14 @@ console.log(calcFactorial(-1));
 
 /*• Fibonacci numbers (the dynamic programming solution is optional)*/
 
-function fibonacciNum(num){
+function fibonacci(num){
     if(num === 0){
         return 0;
     }
     if(num ===1){
         return 1;
     } else {
-        return  fibonacciNum(num-1) + fibonacciNum(num -2);
+        return  fibonacci(num-1) + fibonacci(num -2);
     }
 }
 

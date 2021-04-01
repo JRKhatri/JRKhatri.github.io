@@ -306,11 +306,16 @@ let peopleArray = [{ name: "Sam", age: 15 }, { name: "William", age: 6 },
 function includesEvenAge(arr){
     for(let element of arr){
         for(let prop in element){
-            arr.includes(element[prop]=66)
+            if(prop === "age"){
+            console.log(element[prop])
+          return arr.includes(element[prop]===15);
         }
     }
+       
+    }
+    
 }
-
+console.log(includesEvenAge(peopleArray));
 // function doublesAges(arr){
 //   return arr.filter((element) => { return element["age"]>10;
 // }  
@@ -353,9 +358,38 @@ function includesEvenAge(arr){
 // console.log("expect [2, 4, 6,8,10] ", arr.map(dblFun));//
 // console.log("expect [2, 4, 6,8,10] ", myMap(arr, dblFun));
 
-function area(){
-    console.log(this);
-    return this.side * this.side;
-}
-const square1 ={side:5, area:area};
-console.log(square1.area());
+// function area(){
+//     console.log(this);
+//     return this.side * this.side;
+// }
+// const square1 ={side:5, area:area};
+// console.log(square1.area());
+
+let list = {
+    value: 1,
+    next: {
+      value: 2,
+      next: {
+        value: 3,
+        next: {
+          value: 4,
+          next: null
+        }
+      }
+    }
+  };
+
+  
+//   it("recursive version prints 1 2 3 4 to console", function () {
+//     assert.strictEqual(outputList(list), "1 2 3 4 printed to console");
+// });
+// it("iterative version prints 1 2 3 4 to console", function () {
+//     assert.strictEqual(outputListLoop(list), "1 2 3 4 printed to console");
+// }); 
+
+// it("recursive version prints 4 3 2 1 to console", function () {
+//     assert.strictEqual(reverseList(list), "4 3 2 1 printed to console");
+// });    
+// it("loop version prints 4 3 2 1 to console", function () {
+//     assert.strictEqual(reverseListLoop(list), "4 3 2 1 printed to console");
+// });    

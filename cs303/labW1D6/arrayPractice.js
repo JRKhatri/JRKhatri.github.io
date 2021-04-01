@@ -47,7 +47,7 @@ function includesEvenNum(arr){
 function includesEvenAge(arr){
     for(let element of arr){
         for(let prop in element){
-            arr.includes(element[prop]=66)
+            arr[element[prop]].includes(66)
         }
     }
 }
