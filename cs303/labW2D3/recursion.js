@@ -9,7 +9,7 @@ function sumTo(num){
 
 }
 
-console.log(allSum(0));
+
 
 
 /*Calculate factorial*/
@@ -28,10 +28,7 @@ function factorial(num){
     }
 }
 
-console.log(calcFactorial(5));
-console.log(calcFactorial(1));
-console.log(calcFactorial(0));
-console.log(calcFactorial(-1));
+
 
 /*• Fibonacci numbers (the dynamic programming solution is optional)*/
 
@@ -46,21 +43,62 @@ function fibonacci(num){
     }
 }
 
-console.log(fibonacciNum(5));
-console.log(fibonacciNum(0));
-console.log(fibonacciNum(6));
-console.log(fibonacciNum(8));
+/*recursive version prints 1 2 3 4 to console",outputList(list), "1 2 3 4 printed to console");*/
 
-function travelNode(node, prop){
-    if(node === null){
-        return;
+// function outputList(list){
+//     if(list === null){
+//         return NaN;
+//     } 
+//     if(list["next"]=== null){
+        
+//         return console.log(list["value"]);
+//     } else {
+        
+//         return console.log(list["value"]) + outputList(list["next"]);
+//     }
+    
+//     }
+
+    // let list = {
+    //     value: 1,
+    //     next: {
+    //       value: 2,
+    //       next: {
+    //         value: 3,
+    //         next: {
+    //           value: 4,
+    //           next: null
+    //         }
+    //       }
+    //     }
+    //   };
+
+//    console.log(outputList(list));
+
+/*"iterative version prints 1 2 3 4 to console" - outputListLoop(list), "1 2 3 4 printed to console");*/
+
+function outputListLoop(list){
+    let x = list["next"];
+    let y = list["value"];
+    while(x !== null){
+        console.log(y);
+        y= x["value"];
+        x= x["next"];
+        
     }
-    if(node[prop] === null){
-        return;
-    } else {
-        for(let i = 0; i<node[prop].length; i++){
-            console.log(node["name"]);
-            return travelNode(node[prop][i],prop);
+    console.log(y);
+        }
+
+
+/*recursive version prints 4 3 2 1 to console", reverseList(list), "4 3 2 1 printed to console");*/
+    function reverseList(list){
+        if(list === null){
+            return;
+        }
+        if(list["next"] === null){
+             console.log((list["value"]));
+        } else{
+            reverseList(list["next"]) + console.log(list["value"])
         }
     }
-}
+  //  reverseList(list);

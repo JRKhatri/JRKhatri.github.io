@@ -365,31 +365,66 @@ console.log(includesEvenAge(peopleArray));
 // const square1 ={side:5, area:area};
 // console.log(square1.area());
 
-let list = {
-    value: 1,
-    next: {
-      value: 2,
-      next: {
-        value: 3,
-        next: {
-          value: 4,
-          next: null
-        }
-      }
+let list = {value: 1, next: {value: 2, next: {value: 3,next: {value: 4, next:  { value: 5, next: null}}}}};
+
+// function outputList(list){
+//     if(list === null){
+//         return;
+//     } 
+//     if(list["next"]=== null){
+        
+//         return console.log(list["value"]);
+//     } else {
+        
+//         return console.log(list["value"]) + outputList(list["next"])
+//     }
+    
+//     }
+// outputList(list);
+
+
+
+/*recursive version prints 4 3 2 1 to console", reverseList(list), "4 3 2 1 printed to console");*/
+
+// function reverseList(list){
+//     if(list === null){
+//         return;
+//     }
+//     if(list["next"] === null){
+//          console.log((list["value"]));
+//     } else{
+//         reverseList(list["next"]) + console.log(list["value"])
+//     }
+// }
+// reverseList(list);
+
+
+// function outputListLoop(list){
+//     let x = list["next"];
+//     let y = list["value"];
+//     while(x !== null){
+//         console.log(x[value]);
+//         y= x["value"]
+//         x= x["next"]
+        
+//     }
+//  console.log(y)
+//         }
+                
+
+//outputListLoop(list);
+
+/* prints 4 3 2 1 to console" reverseListLoop(list), "4 3 2 1 printed to console");
+  */
+function reverseListLoop(list){
+    let x = list["next"];
+    let y = x["value"];
+    while(x == null){
+        console.log(y);
+        y= x["value"]
+        x= x["next"]
+        
     }
-  };
-
-  
-//   it("recursive version prints 1 2 3 4 to console", function () {
-//     assert.strictEqual(outputList(list), "1 2 3 4 printed to console");
-// });
-// it("iterative version prints 1 2 3 4 to console", function () {
-//     assert.strictEqual(outputListLoop(list), "1 2 3 4 printed to console");
-// }); 
-
-// it("recursive version prints 4 3 2 1 to console", function () {
-//     assert.strictEqual(reverseList(list), "4 3 2 1 printed to console");
-// });    
-// it("loop version prints 4 3 2 1 to console", function () {
-//     assert.strictEqual(reverseListLoop(list), "4 3 2 1 printed to console");
-// });    
+ console.log(y)
+        }
+        reverseListLoop(list);
