@@ -39,10 +39,15 @@ function findEvenAge(arr){
 }
 
 function includesEvenNum(arr){
-    return arr.include(77)
+    return arr.include(66);
+
 
 }
 
 function includesEvenAge(arr){
-
+    for(let element of arr){
+        for(let prop in element){
+            arr.includes(element[prop]=66)
+        }
+    }
 }

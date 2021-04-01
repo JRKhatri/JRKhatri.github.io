@@ -67,6 +67,9 @@ describe("filter practice", function () {
     });
 
     /* complete the following similar to includes even test */
-    it("includes even age -- write this test");
+    it("includes even age -- write this test", function(){
+        assert.deepEqual(peopleArray.includes(peopleArray[1]["age"]),true);
+
+    });
 
 });

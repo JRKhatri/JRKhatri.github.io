@@ -301,15 +301,61 @@ console.log(Date.now())
 
 let peopleArray = [{ name: "Sam", age: 15 }, { name: "William", age: 6 }, 
 { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }];
-function doublesAges(arr){
-  return arr.filter((element) => { return element["age"]>10;
-}  
-  )  
+
+
+function includesEvenAge(arr){
+    for(let element of arr){
+        for(let prop in element){
+            arr.includes(element[prop]=66)
+        }
+    }
 }
- console.log(doublesAges(peopleArray)); 
- console.log(peopleArray)
 
- let numArray = [5, 0, 7, 77, -20, 300, 51, 2];
+// function doublesAges(arr){
+//   return arr.filter((element) => { return element["age"]>10;
+// }  
+//   )  
+// }
+//  console.log(doublesAges(peopleArray)); 
+//  console.log(peopleArray)
 
- numArray.includes()
+//  let numArray = [5, 0, 7, 77, -20, 300, 51, 2];
 
+//  numArray.includes()
+
+// function countLetters(str, letter){
+//     if(str.length ===0){
+//         return 0;
+//     } else {
+//         if(str[0] === letter){
+//         return 1 + countLetters(str.substring(1), letter)
+//         }
+//       return countLetters(str.substring(1),letter);
+//     }
+
+// }
+// console.log(countLetters("hapapayand", "z"))
+
+// const arr = [1,2,3,4,5];
+
+// function myMap(arr, cbk){
+//     let mapArray=[];
+//     for(let element of arr){
+//       mapArray.push(cbk(element));
+//     }
+//     return mapArray;
+// }
+// console.log()
+
+// const dblFun = num => num * 2;
+// const squareFun = num => num * num;
+
+// console.log("expect [2, 4, 6,8,10] ", arr.map(dblFun));//
+// console.log("expect [2, 4, 6,8,10] ", myMap(arr, dblFun));
+
+function area(){
+    console.log(this);
+    return this.side * this.side;
+}
+const square1 ={side:5, area:area};
+console.log(square1.area());
