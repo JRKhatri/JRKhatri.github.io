@@ -1,4 +1,11 @@
 ("use strict");
+
+/* global exports */
+/* You need the module.exports when testing in node.  Comment it out when you send your file to the browser 
+*/
+module.exports = { sumTo, factorial, fibonacci, outputList, outputListLoop, reverseList, reverseListLoop}; //add all of your function names here that you need for the node mocha tests
+
+
 /*• Sum all numbers till the given one */
 function sumTo(num){
     if(num === 0){
@@ -45,19 +52,19 @@ function fibonacci(num){
 
 /*recursive version prints 1 2 3 4 to console",outputList(list), "1 2 3 4 printed to console");*/
 
-// function outputList(list){
-//     if(list === null){
-//         return NaN;
-//     } 
-//     if(list["next"]=== null){
+function outputList(list){
+    if(list === null){
+        return NaN;
+    } 
+    if(list["next"]=== null){
         
-//         return console.log(list["value"]);
-//     } else {
+        return console.log(list["value"]);
+    } else {
         
-//         return console.log(list["value"]) + outputList(list["next"]);
-//     }
+        return console.log(list["value"]) + outputList(list["next"]);
+    }
     
-//     }
+    }
 
     // let list = {
     //     value: 1,

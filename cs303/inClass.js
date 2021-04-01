@@ -428,3 +428,28 @@ function reverseListLoop(list){
  console.log(y)
         }
         reverseListLoop(list);
+
+node1 = {value:50, next: null};
+head = {value: 10, next: node1};
+head={value :5, next: head}
+console.log(head);
+
+
+
+let indArray = ["hello", "hi","my","go"]
+
+function myFindIndex(arr, callback){
+    for(let i =0; i<arr.length; i++){
+        if(callback(arr[i])){
+            return i;
+        }
+    }
+
+}
+
+company["sales"][1]["name"];
+company["sales"][1]["salary"];
+let second =company.development.sites[2];
+second["name"]; second["salary"]
+
+
