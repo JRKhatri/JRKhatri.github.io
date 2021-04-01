@@ -56,13 +56,15 @@ function outputList(list){
     if(list === null){
         return NaN;
     } 
+    let outputStr="";
     if(list["next"]=== null){
         
-        return console.log(list["value"]);
+        return list["value"];
     } else {
         
-        return console.log(list["value"]) + outputList(list["next"]);
+        outputStr +=  outputList(list["next"]);
     }
+    console.log(outputStr + "to console")
     
     }
 

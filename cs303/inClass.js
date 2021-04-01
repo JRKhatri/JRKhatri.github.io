@@ -416,40 +416,71 @@ let list = {value: 1, next: {value: 2, next: {value: 3,next: {value: 4, next:  {
 
 /* prints 4 3 2 1 to console" reverseListLoop(list), "4 3 2 1 printed to console");
   */
-function reverseListLoop(list){
-    let x = list["next"];
-    let y = x["value"];
-    while(x == null){
-        console.log(y);
-        y= x["value"]
-        x= x["next"]
+// function reverseListLoop(list){
+//     let x = list["next"];
+//     let y = x["value"];
+//     while(x == null){
+//         console.log(y);
+//         y= x["value"]
+//         x= x["next"]
         
+//     }
+//  console.log(y)
+//         }
+//         reverseListLoop(list);
+
+// node1 = {value:50, next: null};
+// head = {value: 10, next: node1};
+// head={value :5, next: head}
+// console.log(head);
+
+
+
+// let indArray = ["hello", "hi","my","go"]
+
+// function myFindIndex(arr, callback){
+//     for(let i =0; i<arr.length; i++){
+//         if(callback(arr[i])){
+//             return i;
+//         }
+//     }
+
+// }
+
+// company["sales"][1]["name"];
+// company["sales"][1]["salary"];
+// let second =company.development.sites[2];
+// second["name"]; second["salary"]
+
+
+function outputList(list){
+    if(list === null){
+        return NaN;
+    } 
+    let outputStr="";
+    if(list["next"]=== null){
+        
+        return list["value"];
+    } else {
+        
+        outputStr +=  outputList(list["next"]);
     }
- console.log(y)
-        }
-        reverseListLoop(list);
-
-node1 = {value:50, next: null};
-head = {value: 10, next: node1};
-head={value :5, next: head}
-console.log(head);
-
-
-
-let indArray = ["hello", "hi","my","go"]
-
-function myFindIndex(arr, callback){
-    for(let i =0; i<arr.length; i++){
-        if(callback(arr[i])){
-            return i;
-        }
+    console.log(outputStr + "to console")
+    
     }
 
-}
+    let list = {
+        value: 1,
+        next: {
+          value: 2,
+          next: {
+            value: 3,
+            next: {
+              value: 4,
+              next: null
+            }
+          }
+        }
+      };
 
-company["sales"][1]["name"];
-company["sales"][1]["salary"];
-let second =company.development.sites[2];
-second["name"]; second["salary"]
-
-
+   console.log(outputList(list));
