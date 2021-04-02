@@ -49,7 +49,7 @@ describe("recursion tests", function () {
         assert.strictEqual(fibonacci(30), 832040);
     });
     it("recursive version prints 1 2 3 4 to console", function () {
-        assert.strictEqual(outputList(list), 1, 2, 3, 4);
+        assert.strictEqual(outputList(list), "1 2 3 4 printed to console");
     });
     it("iterative version prints 1 2 3 4 to console", function () {
         assert.strictEqual(outputListLoop(list), "1 2 3 4 printed to console");

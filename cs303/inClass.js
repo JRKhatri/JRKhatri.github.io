@@ -371,63 +371,77 @@ let list = {value: 1, next: {value: 2, next: {value: 3,next: {value: 4, next:  {
 //     if(list === null){
 //         return;
 //     } 
-//     if(list["next"]=== null){
-        
-//         return console.log(list["value"]);
+//     if(list.next === null){
+//       return list.value + " printed to console";
 //     } else {
-        
-//         return console.log(list["value"]) + outputList(list["next"])
+      
+//       return list.value+" "+outputList(list.next);
+      
+      
 //     }
+         
+         
+//        }
     
-//     }
-// outputList(list);
+// console.log(outputList(list));
 
 
 
 /*recursive version prints 4 3 2 1 to console", reverseList(list), "4 3 2 1 printed to console");*/
 
 // function reverseList(list){
-//     if(list === null){
-//         return;
-//     }
-//     if(list["next"] === null){
-//          console.log((list["value"]));
-//     } else{
-//         reverseList(list["next"]) + console.log(list["value"])
-//     }
-// }
-// reverseList(list);
+//   if(list === null){
+//             return;
+//         } 
+//         if(list.value === 1){
+//             return reverseList(list.next) +" " + list.value +" printed to console" ;
+            
+//         }
+//         if(list.next !== null){
+          
+//           return reverseList(list.next) +" "+ list.value;
+//         } else {
+          
+//           return list.value;
+//         }
+//       }
+// console.log(reverseList(list));
+
 
 
 // function outputListLoop(list){
-//     let x = list["next"];
-//     let y = list["value"];
-//     while(x !== null){
-//         console.log(x[value]);
-//         y= x["value"]
-//         x= x["next"]
-        
-//     }
-//  console.log(y)
-//         }
+//   let objNext = list["next"];
+//   let objValue= list["value"];
+//   let concatValue="";
+//   while(objNext !== null){
+//     concatValue += objValue + " ";
+//       objValue= objNext["value"];
+//       objNext= objNext["next"]; 
+//   }
+//   return concatValue + objValue +" printed to console";
+//       }
                 
 
-//outputListLoop(list);
+// console.log(outputListLoop(list));
 
 /* prints 4 3 2 1 to console" reverseListLoop(list), "4 3 2 1 printed to console");
   */
-// function reverseListLoop(list){
-//     let x = list["next"];
-//     let y = x["value"];
-//     while(x == null){
-//         console.log(y);
-//         y= x["value"]
-//         x= x["next"]
-        
-//     }
-//  console.log(y)
-//         }
-//         reverseListLoop(list);
+function reverseListLoop(list){
+    let nodeNext = list["next"];
+    let nodeValue = list["value"];
+    let reverseStr="";
+    while(nodeNext !== null){
+       reverseStr = " " + nodeValue + reverseStr ;
+        nodeValue= nodeNext["value"]
+        nodeNext= nodeNext["next"] 
+    }
+ return nodeValue + reverseStr + " printed to console";
+        }
+
+    console.log(reverseListLoop(list));
+
+
+
 
 // node1 = {value:50, next: null};
 // head = {value: 10, next: node1};
@@ -453,34 +467,4 @@ let list = {value: 1, next: {value: 2, next: {value: 3,next: {value: 4, next:  {
 // second["name"]; second["salary"]
 
 
-function outputList(list){
-    if(list === null){
-        return NaN;
-    } 
-    let outputStr="";
-    if(list["next"]=== null){
-        
-        return list["value"];
-    } else {
-        
-        outputStr +=  outputList(list["next"]);
-    }
-    console.log(outputStr + "to console")
-    
-    }
 
-    let list = {
-        value: 1,
-        next: {
-          value: 2,
-          next: {
-            value: 3,
-            next: {
-              value: 4,
-              next: null
-            }
-          }
-        }
-      };
-
-   console.log(outputList(list));
