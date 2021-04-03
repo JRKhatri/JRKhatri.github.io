@@ -1,5 +1,5 @@
 
-("use strict");
+//("use strict");
 /*
 Create 3 objects, student1, student2, student3
  property studentId :  s101, s102, s103 respectively
@@ -244,7 +244,7 @@ let team =["Bob", "Jim", "Tim"];
 // console.log(myMap(arrO,someFunc));
 
 
-"use strict";
+//"use strict";
 /* eslint-disable */
 /* Write code that measures how long it takes to find the maximal subarray for an array that has 10 elements and another 
 that has 100 elements using first the O(n) solution and then the O(n**2) solution.
@@ -426,19 +426,19 @@ let list = {value: 1, next: {value: 2, next: {value: 3,next: {value: 4, next:  {
 
 /* prints 4 3 2 1 to console" reverseListLoop(list), "4 3 2 1 printed to console");
   */
-function reverseListLoop(list){
-    let nodeNext = list["next"];
-    let nodeValue = list["value"];
-    let reverseStr="";
-    while(nodeNext !== null){
-       reverseStr = " " + nodeValue + reverseStr ;
-        nodeValue= nodeNext["value"]
-        nodeNext= nodeNext["next"] 
-    }
- return nodeValue + reverseStr + " printed to console";
-        }
+// function reverseListLoop(list){
+//     let nodeNext = list["next"];
+//     let nodeValue = list["value"];
+//     let reverseStr="";
+//     while(nodeNext !== null){
+//        reverseStr = " " + nodeValue + reverseStr ;
+//         nodeValue= nodeNext["value"]
+//         nodeNext= nodeNext["next"] 
+//     }
+//  return nodeValue + reverseStr + " printed to console";
+//         }
 
-    console.log(reverseListLoop(list));
+//     console.log(reverseListLoop(list));
 
 
 
@@ -468,3 +468,93 @@ function reverseListLoop(list){
 
 
 
+// function log() { console.log("No Arguments");
+// }
+// function log(x) {
+// console.log("1 Argument: " + x); }
+// function log(x, y) {
+// console.log("2 Arguments: " + x + ", " + y);
+// }
+// log(); log(5); log(6, 7);
+
+// let a, b, c, d, e;
+// a = {a:1, b:2, c:3, d: 44}
+// b = {...a }
+// console.log(b) // {a:1, b:2, c:3, d: 44}
+// b.a = 100;
+// console.log(a) // {a:1, b:2, c:3, d: 44}
+// console.log(b);
+
+// function makeWorker()
+
+// { let name = "Pete";
+
+//     return function() { console.log(name); };
+
+// }
+
+// let name = "John";
+
+// // create a function
+
+// let work = makeWorker();
+
+// // call it
+
+// work(); // what will it show?
+// let filter1To7 = inArray(arr);
+       // assert.strictEqual(filter1To7(5), true);
+let arr = [1, 2, 3, 4, 5, 6, 7];
+        
+
+// function inArray(arr){
+//     return function(target){
+//       return  arr.includes(target )
+//     }
+
+// }
+// let filter1To7 = inArray(arr);
+
+// console.log(filter1To7(6));
+
+let users1 = [
+    { name: "John", age: 20, surname: "Johnson" },
+    { name: "Pete", age: 18, surname: "Peterson" },
+    { name: "Ann", age: 19, surname: "Hathaway" },
+  ];
+
+//   it("sorts users by name", function(){
+//     let nameSortedKey = [
+//       { name: "Ann", age: 19, surname: "Hathaway" },
+//       { name: "John", age: 20, surname: "Johnson"},
+//       { name: "Pete", age: 18, surname: "Peterson" },
+//     ];
+   // let nameSortedAnswer = users.sort(byField("name"));
+   // assert.deepEqual( nameSortedAnswer, nameSortedKey);
+  //});
+        
+//   function byField(fieldName){
+//     return function(a,b){
+//         return a[fieldName]> b[fieldName]? 1:-1;
+//     }
+// }
+
+// let nameSortedAnswer = users1.sort(byField("name"));
+// console.log(nameSortedAnswer);
+
+// let arr1=["hari","aapp","mohan","baba"];
+// console.log(arr1.sort());
+
+let army = makeArmy();
+      
+    
+      it("army[0] shows 0", function() {
+        const shooter0 = army[0]();
+        assert.strictEqual(shooter0, 0);
+      });
+    
+    
+      it("army[5] shows 5", function() {
+        const shooter5 = army[5]();
+        assert.strictEqual(shooter5, 5);
+      });
