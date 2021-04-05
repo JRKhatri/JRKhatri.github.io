@@ -1,5 +1,5 @@
 
-//("use strict");
+("use strict");
 /*
 Create 3 objects, student1, student2, student3
  property studentId :  s101, s102, s103 respectively
@@ -545,16 +545,130 @@ let users1 = [
 // let arr1=["hari","aapp","mohan","baba"];
 // console.log(arr1.sort());
 
-let army = makeArmy();
-      
+const bank = {    transactionsDB: [],};
+bank.transactionsDB = [
+    { customerId: 1, customerTransactions: [10, 50, -40] },
+    { customerId: 2, customerTransactions: [10, 10, -10] },
+    { customerId: 3, customerTransactions: [5, -5, 55] }];
+
+bank.getBalance = function (id) {
+    const customer = bank.transactionsDB.find(customer => customer.customerId === id);
+    let balance = 0;
+    for (const trans of customer.customerTransactions) {    balance += trans;   }
+    return balance;  };
+
+/** * @returns {number}  returns sum of all balances */
+bank.bankBalance = function () {
+  let custom = bank.transactionsDB;
+  let sum = 0;
+  for(let customerTrans of custom){
+    let tannsArray = customerTrans.customerTransactions;
+    sum += tannsArray.reduce((pre, item) => pre + item,0);
     
-      it("army[0] shows 0", function() {
-        const shooter0 = army[0]();
-        assert.strictEqual(shooter0, 0);
-      });
-    
-    
-      it("army[5] shows 5", function() {
-        const shooter5 = army[5]();
-        assert.strictEqual(shooter5, 5);
-      });
+  }
+return sum;
+}
+console.log(bank.bankBalance());
+
+
+
+// let phrase ="Hello";
+// if(true){
+//   let user ="John";
+//   function sayHi() {
+//     console.log(`${phrase},${users1}`)
+//   }
+// }
+
+// sayHi();
+
+
+//let i =set;
+// function sayHi(text, name){
+//   console.log(text + name)
+//   setTimeout(sayHi,5000,"ama", "buwa")
+// }
+//  setTimeout(sayHi,1000,"Buwa", "Mummy")
+
+
+// let timerId = setTimeout(function sayHi(){console.log("hello"); timerId= setTimeout(sayHi,100)},100);
+
+// setInterval(()=>console.log("ramram"),200);
+
+// setTimeout(()=>console.log("first"));
+// console.log("second")
+// console.log("third");
+// let i =4;
+// console.log(i);
+
+//Write a function printNumbers(from, to) that outputs
+ //a number every second, starting from from and ending with to.
+
+// Make two variants of the solution.
+
+// Using setInterval.
+// Using nested setTimeout.
+
+ //function printNumbers(from, to){
+//   let start = from;
+//   setTimeout(function go() {
+//     console.log(from);
+//     if(from < to){
+//       setTimeout(go,1000)
+//     }
+//     from++;
+//   },1000
+//   )
+// }
+//   printNumbers(1,10);
+
+// function printNumber(from, to){
+//   let timerId = setInterval(function(){
+//     console.log(from);
+//     if(from < to){
+//       clearInterval(timerId)
+//     }
+//     from++;
+//   },1000)
+// }
+// printNumbers(11,20)
+
+const oldArr = [1, 2, 3];
+        // const newArr = copyArray(oldArr);
+
+        // assert.deepEqual(newArr, oldArr);
+        // oldArr.push[4];
+        // assert.deepEqual(oldArr, [1, 2, 3]);
+
+        // const newArr = [...oldArr];
+        // console.log(newArr);
+        // oldArr.push[4]
+        // console.log(oldArr)
+        // JSON.stringify(oldArr)
+        // console.log(oldArr === newArr)
+
+        // let x =oldArr.concat(newArr);
+        // console.log(x);
+    /*another*/    
+// function min(...num){
+//   let arr = num;
+//   return Math.min(...arr)
+//   }
+//   //return x;
+// console.log(min(1,3,10,9))
+
+
+const obj1 = {prop1: 1, prop2: 2};
+const obj2 = {prop3: 1, prop4: 2};
+
+// assert.deepEqual(combineObjs(obj1, obj2), {prop1: 1, prop2: 2, prop3: 1, prop4: 2});
+// });
+
+function combineObjs(obj1, obj2){
+ // console.log(obj1)
+  let newObjs ={ ...obj1,...obj2}
+  console.log(newObjs)
+  //console.log(newObjs.obj1.prop2);
+
+}
+console.log(combineObjs(obj1,obj2))
