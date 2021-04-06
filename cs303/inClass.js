@@ -1,5 +1,5 @@
 
-("use strict");
+//("use strict");
 /*
 Create 3 objects, student1, student2, student3
  property studentId :  s101, s102, s103 respectively
@@ -135,11 +135,11 @@ const numbers =[1,5,18,2,77,108];
 
 //console.log(isNaN("a"));
 
-let users = [
-    {id: 'john', name: "John Smith", age: 20},
-    {id: 'ann', name: "Ann Smith", age: 24},
-    {id: 'pete', name: "Pete Peterson", age: 31},
-  ];
+// let users = [
+//     {id: 'john', name: "John Smith", age: 20},
+//     {id: 'ann', name: "Ann Smith", age: 24},
+//     {id: 'pete', name: "Pete Peterson", age: 31},
+//   ];
 //console.log(users[1]);
 //   assert.deepEqual(groupById(users), {
 //     john: {id: 'john', name: "John Smith", age: 20},
@@ -171,7 +171,7 @@ let users = [
 
 // console.log(sumOf);
 
-let team =["Bob", "Jim", "Tim"];
+//let team =["Bob", "Jim", "Tim"];
 //  const [bob,jim, tim] = team;
 //  console.log(jim);
 
@@ -250,72 +250,72 @@ let team =["Bob", "Jim", "Tim"];
 that has 100 elements using first the O(n) solution and then the O(n**2) solution.
 */
 
-function getMaxSubSumSlow(arr) {
-    let maxSum = 0; // if we take no elements, zero will be returned
+// function getMaxSubSumSlow(arr) {
+//     let maxSum = 0; // if we take no elements, zero will be returned
 
-    for (let i = 0; i < arr.length; i++) {
-        let sumFixedStart = 0;
-        for (let j = i; j < arr.length; j++) {
-            sumFixedStart += arr[j];
-            maxSum = Math.max(maxSum, sumFixedStart);
-        }
-    }
+//     for (let i = 0; i < arr.length; i++) {
+//         let sumFixedStart = 0;
+//         for (let j = i; j < arr.length; j++) {
+//             sumFixedStart += arr[j];
+//             maxSum = Math.max(maxSum, sumFixedStart);
+//         }
+//     }
 
-    return maxSum;
-}
+//     return maxSum;
+// }
 
-function getMaxSubSum(arr) {
-    let maxSum = 0;
-    let partialSum = 0;
+// function getMaxSubSum(arr) {
+//     let maxSum = 0;
+//     let partialSum = 0;
 
-    for (let item of arr) { // for each item of arr
-        partialSum += item; // add it to partialSum
-        maxSum = Math.max(maxSum, partialSum); // remember the maximum
-        if (partialSum < 0) partialSum = 0; // zero if negative
-    }
+//     for (let item of arr) { // for each item of arr
+//         partialSum += item; // add it to partialSum
+//         maxSum = Math.max(maxSum, partialSum); // remember the maximum
+//         if (partialSum < 0) partialSum = 0; // zero if negative
+//     }
 
-    return maxSum;
-}
+//     return maxSum;
+// }
 
-function makeArray(n) {
-    const arr = [];
-    for (let i = 0; i <= n; i++) {
-        arr.push(i);
-    }
-    return arr;
-}
-const arr10 = makeArray(10);
-const arr100 = makeArray(100);
+// function makeArray(n) {
+//     const arr = [];
+//     for (let i = 0; i <= n; i++) {
+//         arr.push(i);
+//     }
+//     return arr;
+// }
+// const arr10 = makeArray(10);
+// const arr100 = makeArray(100);
 
-let start = Date.now(); // milliseconds count from 1 Jan 1970
-// do the job
-for (let i = 0; i < 100000; i++) {
-  let doSomething = i * i * i;
-}
-let end = Date.now(); // done
-console.log( `The loop took ${end - start} ms` ); // subtract numbers, not dates
+// let start = Date.now(); // milliseconds count from 1 Jan 1970
+// // do the job
+// for (let i = 0; i < 100000; i++) {
+//   let doSomething = i * i * i;
+// }
+// let end = Date.now(); // done
+// console.log( `The loop took ${end - start} ms` ); // subtract numbers, not dates
 
-console.log(Date.now())
-
-
-
-let peopleArray = [{ name: "Sam", age: 15 }, { name: "William", age: 6 }, 
-{ name: "Lucy", age: 13 }, { name: "Barney", age: 80 }];
+// console.log(Date.now())
 
 
-function includesEvenAge(arr){
-    for(let element of arr){
-        for(let prop in element){
-            if(prop === "age"){
-            console.log(element[prop])
-          return arr.includes(element[prop]===15);
-        }
-    }
+
+// let peopleArray = [{ name: "Sam", age: 15 }, { name: "William", age: 6 }, 
+// { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }];
+
+
+// function includesEvenAge(arr){
+//     for(let element of arr){
+//         for(let prop in element){
+//             if(prop === "age"){
+//             console.log(element[prop])
+//           return arr.includes(element[prop]===15);
+//         }
+//     }
        
-    }
+//     }
     
-}
-console.log(includesEvenAge(peopleArray));
+// }
+// console.log(includesEvenAge(peopleArray));
 // function doublesAges(arr){
 //   return arr.filter((element) => { return element["age"]>10;
 // }  
@@ -365,7 +365,7 @@ console.log(includesEvenAge(peopleArray));
 // const square1 ={side:5, area:area};
 // console.log(square1.area());
 
-let list = {value: 1, next: {value: 2, next: {value: 3,next: {value: 4, next:  { value: 5, next: null}}}}};
+//let list = {value: 1, next: {value: 2, next: {value: 3,next: {value: 4, next:  { value: 5, next: null}}}}};
 
 // function outputList(list){
 //     if(list === null){
@@ -504,7 +504,7 @@ let list = {value: 1, next: {value: 2, next: {value: 3,next: {value: 4, next:  {
 // work(); // what will it show?
 // let filter1To7 = inArray(arr);
        // assert.strictEqual(filter1To7(5), true);
-let arr = [1, 2, 3, 4, 5, 6, 7];
+//let arr = [1, 2, 3, 4, 5, 6, 7];
         
 
 // function inArray(arr){
@@ -517,11 +517,11 @@ let arr = [1, 2, 3, 4, 5, 6, 7];
 
 // console.log(filter1To7(6));
 
-let users1 = [
-    { name: "John", age: 20, surname: "Johnson" },
-    { name: "Pete", age: 18, surname: "Peterson" },
-    { name: "Ann", age: 19, surname: "Hathaway" },
-  ];
+// let users1 = [
+//     { name: "John", age: 20, surname: "Johnson" },
+//     { name: "Pete", age: 18, surname: "Peterson" },
+//     { name: "Ann", age: 19, surname: "Hathaway" },
+//   ];
 
 //   it("sorts users by name", function(){
 //     let nameSortedKey = [
@@ -545,30 +545,30 @@ let users1 = [
 // let arr1=["hari","aapp","mohan","baba"];
 // console.log(arr1.sort());
 
-const bank = {    transactionsDB: [],};
-bank.transactionsDB = [
-    { customerId: 1, customerTransactions: [10, 50, -40] },
-    { customerId: 2, customerTransactions: [10, 10, -10] },
-    { customerId: 3, customerTransactions: [5, -5, 55] }];
+// const bank = {    transactionsDB: [],};
+// bank.transactionsDB = [
+//     { customerId: 1, customerTransactions: [10, 50, -40] },
+//     { customerId: 2, customerTransactions: [10, 10, -10] },
+//     { customerId: 3, customerTransactions: [5, -5, 55] }];
 
-bank.getBalance = function (id) {
-    const customer = bank.transactionsDB.find(customer => customer.customerId === id);
-    let balance = 0;
-    for (const trans of customer.customerTransactions) {    balance += trans;   }
-    return balance;  };
+// bank.getBalance = function (id) {
+//     const customer = bank.transactionsDB.find(customer => customer.customerId === id);
+//     let balance = 0;
+//     for (const trans of customer.customerTransactions) {    balance += trans;   }
+//     return balance;  };
 
-/** * @returns {number}  returns sum of all balances */
-bank.bankBalance = function () {
-  let custom = bank.transactionsDB;
-  let sum = 0;
-  for(let customerTrans of custom){
-    let tannsArray = customerTrans.customerTransactions;
-    sum += tannsArray.reduce((pre, item) => pre + item,0);
+// /** * @returns {number}  returns sum of all balances */
+// bank.bankBalance = function () {
+//   let custom = bank.transactionsDB;
+//   let sum = 0;
+//   for(let customerTrans of custom){
+//     let tannsArray = customerTrans.customerTransactions;
+//     sum += tannsArray.reduce((pre, item) => pre + item,0);
     
-  }
-return sum;
-}
-console.log(bank.bankBalance());
+//   }
+// return sum;
+// }
+// console.log(bank.bankBalance());
 
 
 
@@ -633,7 +633,7 @@ console.log(bank.bankBalance());
 // }
 // printNumbers(11,20)
 
-const oldArr = [1, 2, 3];
+//const oldArr = [1, 2, 3];
         // const newArr = copyArray(oldArr);
 
         // assert.deepEqual(newArr, oldArr);
@@ -658,17 +658,73 @@ const oldArr = [1, 2, 3];
 // console.log(min(1,3,10,9))
 
 
-const obj1 = {prop1: 1, prop2: 2};
-const obj2 = {prop3: 1, prop4: 2};
+// const obj1 = {prop1: 1, prop2: 2};
+// const obj2 = {prop3: 1, prop4: 2};
 
 // assert.deepEqual(combineObjs(obj1, obj2), {prop1: 1, prop2: 2, prop3: 1, prop4: 2});
 // });
 
-function combineObjs(obj1, obj2){
+//function combineObjs(obj1, obj2){
  // console.log(obj1)
-  let newObjs ={ ...obj1,...obj2}
-  console.log(newObjs)
+  //let newObjs ={ ...obj1,...obj2}
+ // console.log(newObjs)
   //console.log(newObjs.obj1.prop2);
 
-}
-console.log(combineObjs(obj1,obj2))
+//}
+//console.log(combineObjs(obj1,obj2))
+
+"use strict";
+
+// let phrase = "Hello";
+// if (true) {
+//   let user = "John";
+//   function sayHi() {
+//   //  console.log(`${phrase}, ${user}`);
+//   }
+// }
+// sayHi();  //what will this show?  Assume running in strict mode (ES6)
+
+
+// let john = { name: "John", surname: "Smith", age: 10 }; 
+// let pete = { name: "Pete", surname: "Hunt", age: 20 }; 
+// let people = [ john, pete]; 
+
+// //Use the map function to map the people array to the following: 
+// [{ fullName: "John Smith", id: 1 }, 
+// { fullName: "Pete Hunt", id: 2 },] 
+
+//  let newObjArray =people.map(function(item, index){ let newObj = {};
+//   newObj.fullName = item.name +" " + item.surname,
+//   newObj.id = index+1;
+//   return newObj;
+// });
+
+//console.log(newObjArray)
+
+// function sayHi(){
+//   console.log("hello")
+// }
+
+// setTimeout(sayHi(),3000)
+
+
+// function a(){
+//   console.log(this);}
+
+// const b = {dog : "fido",
+// log: function(){
+//   console.log(this);
+// }}
+
+// console.log(this);
+// a();
+// b.log();
+// let mylog = b.log;
+// mylog();
+
+// function area(){
+//   console.log(this);
+//   return this.side * this.side;
+// }
+// const square1 ={side:5,area:area}
+// console.log(area())
