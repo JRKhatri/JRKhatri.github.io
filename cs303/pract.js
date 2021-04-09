@@ -1,5 +1,5 @@
 
-"use.strict"
+//"use.strict"
 
 
 // function area(){
@@ -22,13 +22,13 @@
 
 // setTimeout(function(){user.sayHi();},1000)
 
-
-let user = {
-  firstName: "John",
-  sayHi(){
-    console.log(`hello, ${this.firstName}`)
-  }
-};
+/** */
+// let user = {
+//   firstName: "John",
+//   sayHi(){
+//     console.log(`hello, ${this.firstName}`)
+//   }
+// };
 
 // let firstName ="hap"
 
@@ -36,9 +36,187 @@ let user = {
 //   console.log(this.firstName);
 // }
 //user.sayHi=()=>{console.log("birthday")}
-let sayHi= user.sayHi
+//let sayHi= user.sayHi
 //user.sayHi=()=>{console.log("day")}
 
+//sayHi();
+/** */
+//let today = new Date(2021, 3, 6, 1, 2, 3);
+// console.log(new Date(-24*3600*1000))
+// console.log(new Date(0));
+// console.log(today);
 
+// console.log(today.getTime())
+// console.log(new Date(today.getTime()))
+// const moonLanding = new Date('July 20, 20 00:20:18');
 
-sayHi();
+// console.log(moonLanding.getFullYear());
+/** */
+// "use strict";
+// let phrase = "Hello";
+// if (true) {
+//   let user = "John";
+//   function sayHi() {
+//     console.log(`${phrase}, ${user}`);
+//   }
+// }
+// sayHi(); 
+/** */
+// let john = { name: "John", surname: "Smith", age: 10 }; 
+// let pete = { name: "Pete", surname: "Hunt", age: 20 }; 
+// let people = [ john, pete]; 
+
+// let newO = people.map((item, index)=>{
+//     let newObj ={
+//         fullName: item.name,
+//         id: index +1
+//     };
+//     return newObj;
+
+// })
+// console.log(newO)
+
+/** */
+//Use the map function to map the people array to the following: 
+// [{ fullName: "John Smith", id: 1 }, 
+// { fullName: "Pete Hunt", id: 2 }] 
+
+// let group = {
+//     title: "Our Group",
+//     students: ["John", "Pete", "Alice"],
+//      showList() {
+//     this.students.forEach((student)=> { console.log(this.title + ': ' + student)
+//     });
+//     this.students.forEach(function(student) { console.log(this.title + ': ' + student)
+// }.bind(group)) } // or instead of group we can use group.
+//     };
+//      group.showList();
+
+/** */
+// let now = new Date();
+// console.log(now);
+// now.setSeconds(now.getSeconds()+70);
+// console.log(now);
+// "use strict";
+// let arr ="hello";
+// //let str = (...arr);
+// console.log({...arr});
+//"use strict"
+
+  // function printNumbers(from, to){
+  //  let timer = setInterval(()=> {console.log(from);
+  //   if(from === to){
+  //     clearInterval(timer)
+  //   };from++},1000)
+  // }
+  //    printNumbers(1,10);
+
+  // function printNum(from, to){
+  //   setTimeout(function run(){
+  //     console.log(from);
+  //     if(from < to){
+  //       setTimeout(run,1000);
+  //     }
+  //     from++;
+  //   },1000)
+  // }
+  // printNum(5,10)
+
+  // function fast(from, to){
+  //   let current = from;
+  //   function go(){
+  //     console.log(current);
+  //     if(current === to){
+  //       clearInterval(timer)
+  //     }
+  //     current++;
+  //   }
+  //   go();
+  //   let timer = setInterval(go,1000)
+  // }
+  // fast(11, 15);
+
+//   let node3 = {
+//     name: "p",
+//     value: "This is text in the a paragraph",
+//     children: null
+// };
+// let node4 = {
+//     name: "label",
+//     value: "Name",
+//     children: null
+// };
+// let node5 = {
+//     name: "input",
+//     value: "this was typed by a user",
+//     children: null
+// };
+// let node2 = {
+//     name: "div",
+//     value: null,
+//     children: [node4, node5]
+// };
+// let node1 = {
+//     name: "body",
+//     children: [node2, node3],
+//     value: null,
+// };
+
+// function child(node){    
+//     if (node.children === null) return;
+//     for(let ch of node.children){
+//         console.log(ch);
+//         child(ch);
+//     }
+// }
+// child(node1);
+// const arr = [1, 2, 3];
+// function myReduce(arr, callback, initialValue) {   
+//   if(initialValue === undefined) initialValue = 0;
+  
+//   let result = initialValue;
+//   for (let item of arr) {
+//       result = callback(result, item);
+//   }
+//   return result;
+// }
+
+// const sum = (acc, val) => acc + val;
+
+// console.log("expect: 6: ", arr.reduce(sum, 0));
+// console.log("expect: 6: ", myReduce(arr, sum, 0));
+// console.log("expect: 6: ", myReduce(arr, sum));
+
+// ["h","l","m"].forEach(function(item,index,array){})
+
+"use strict";
+// function perimeter(){ 
+//   console.log(this);
+//    return 4 * this.side;
+//   }
+
+// const shape = {side: 5, perimeter: perimeter};
+// console.log(shape.perimeter());
+
+// const abc = {a:1, b:2, add: function() { console.log("1+2 = 3?",this.a + this.b); }} 
+// abc.add(); //works
+// //setTimeout(abc.add, 2000); //problem!
+// setTimeout(abc.add.bind(abc), 2000); //works
+// setTimeout(function() {abc.add.call(abc)}, 2000); //works 
+// setTimeout(function() {abc.add.apply(abc)}, 2000); //works
+
+// let user = { firstName: "John", sayHi() {
+//   console.log(`Hello, ${this.firstName}!`); }
+//   };
+//   setTimeout(user.sayHi, 1000); // Hello, undefined!
+//"use strict"
+
+const abc = { name: "",
+log: function() {
+this.name = "Hello";
+console.log(this.name); //Hello
+const setFrench = (() => this.name ="bonjou"); //inner function setFrench("Bonjour");
+console.log(this.name); //Bonjour
+setFrench();
+} };
+abc.log();

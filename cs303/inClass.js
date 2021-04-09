@@ -728,3 +728,16 @@ that has 100 elements using first the O(n) solution and then the O(n**2) solutio
 // }
 // const square1 ={side:5,area:area}
 // console.log(area())
+
+let group = {
+  title: "Our Group",
+  students: ["John", "Pete", "Alice"],
+  showList(){
+  this.students.forEach(function(student) {
+  // Error: Cannot read property 'title' of undefined 
+  console.log(this.title + ': ' + student)
+  }); 
+}
+  }; 
+  let x =group.showList.bind(group);
+  x()
