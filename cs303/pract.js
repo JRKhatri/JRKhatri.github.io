@@ -211,12 +211,45 @@
 //   setTimeout(user.sayHi, 1000); // Hello, undefined!
 //"use strict"
 
-const abc = { name: "",
-log: function() {
-this.name = "Hello";
-console.log(this.name); //Hello
-const setFrench = (() => this.name ="bonjou"); //inner function setFrench("Bonjour");
-console.log(this.name); //Bonjour
-setFrench();
-} };
-abc.log();
+// function Accumulator(initialValue, increment){
+//   this.currentValue = initialValue;
+//   this.increment = increment;
+//   this.accumulate= function(){
+//   const accumulateValue = this.currentValue + this.increment;
+//   this.currentValue = accumulateValue;
+//   }
+// }
+// let acc = new Accumulator(5,10);
+// console.log(acc);
+// acc.accumulate();
+// acc.accumulate();
+// console.log(acc.currentValue);
+// console.log(acc.increment)
+
+const bicycle = {
+  gear :1,
+  speed :0,
+  applyBrake: function(decrement){
+      this.speed -= decrement;
+  },
+  speedUp: function(increment){
+      this.speed += increment;
+  }
+}
+
+const mountainBike = {
+  gear : 3,
+  speed : 2,
+  seatHeight: 2,
+  adjustSeatHt :function(newHeight){
+    this.seatHeight = newHeight;
+
+  }
+};
+mountainBike.__proto__=bicycle;
+
+console.log(mountainBike);
+mountainBike.speedUp(100);
+mountainBike.applyBrake(10);
+console.log("92:" + mountainBike.speed);
+console.log("3:" + mountainBike.gear);
