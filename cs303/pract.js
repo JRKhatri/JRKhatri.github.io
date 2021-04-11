@@ -226,30 +226,98 @@
 // console.log(acc.currentValue);
 // console.log(acc.increment)
 
-const bicycle = {
-  gear :1,
-  speed :0,
-  applyBrake: function(decrement){
-      this.speed -= decrement;
-  },
-  speedUp: function(increment){
-      this.speed += increment;
-  }
+// const bicycle = {
+//   gear :1,
+//   speed :0,
+//   applyBrake: function(decrement){
+//       this.speed -= decrement;
+//   },
+//   speedUp: function(increment){
+//       this.speed += increment;
+//   }
+// }
+
+// const mountainBike = {
+//   gear : 3,
+//   speed : 2,
+//   seatHeight: 2,
+//   adjustSeatHt :function(newHeight){
+//     this.seatHeight = newHeight;
+
+//   }
+// };
+// mountainBike.__proto__=bicycle;
+
+// console.log(mountainBike);
+// mountainBike.speedUp(100);
+// mountainBike.applyBrake(10);
+// console.log("92:" + mountainBike.speed);
+// console.log("3:" + mountainBike.gear);
+
+
+// function makeCounter(){
+  
+// let count =0;
+// return function(increment){
+//   if(increment === undefined){
+//     count =count +1;
+//   } else{
+//     count = count+ increment;
+//   }
+//   if(increment >3){
+//     return "warning"
+//   } else {
+//     count++;
+//   }
+// }
+// }
+
+const quiz = {};
+quiz.students = [{ sid: 10, answers: [{ qid: 2, ans: "b" }, { qid: 3, ans: "a" }, { qid: 1, ans: "b" }] },
+{ sid: 11, answers: [{ qid: 1, ans: "e" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }] },
+{ sid: 12, answers: [{ qid: 3, ans: "b" }, { qid: 2, ans: "a" }, { qid: 1, ans: "d" }] }];
+
+quiz.key = [{ qid: 1, ans: "b" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }];
+
+/**
+ * 
+ * @param {Object} ans1 is an answer object
+ * @param {Object} ans2 is an answer object 
+ * @returns {number} difference of the identifiers
+ */
+ function answerComparator(ans1, ans2) {
+  return ans1.qid > ans2.qid ? 1 : -1;
+//IMPLEMENT THIS
 }
 
-const mountainBike = {
-  gear : 3,
-  speed : 2,
-  seatHeight: 2,
-  adjustSeatHt :function(newHeight){
-    this.seatHeight = newHeight;
 
+/**
+* 
+* @param {*} sid student id
+* @returns {number} score for student
+* find this student
+* sort the student answers
+* compare them against key and add up matches
+*/
+quiz.scoreStudent = function (sid) {
+//IMPLEMENT THIS
+let student = this.students.find(item => item.sid === sid);
+let studentAns = student.answers;
+
+studentAns.sort(answerComparator);
+
+let score = 0;
+let index=0;
+
+for(let element of studentAns){
+  
+  if(element.ans === this.key[index].ans){
+    
+      score++;
   }
+  index++;
+}
+return score;
 };
-mountainBike.__proto__=bicycle;
 
-console.log(mountainBike);
-mountainBike.speedUp(100);
-mountainBike.applyBrake(10);
-console.log("92:" + mountainBike.speed);
-console.log("3:" + mountainBike.gear);
+

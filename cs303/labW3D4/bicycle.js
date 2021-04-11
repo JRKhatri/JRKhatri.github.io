@@ -23,12 +23,15 @@ adjustSeat : function(newHeight){
 //mountainBike.gear =3;
 //mountainBike.speed =2;
  
-console.log(bicycle)
-console.log(mountainBike);
-mountainBike.speedUp(100);
-mountainBike.applyBrake(10);
-console.log("92:" + mountainBike.speed);
-console.log("3:" + mountainBike.gear);
+// console.log(bicycle)
+// console.log(mountainBike);
+// mountainBike.speedUp(100);
+// mountainBike.applyBrake(10);
+// console.log("92:" + mountainBike.speed);
+// console.log("3:" + mountainBike.gear);
 
 
-module.exports = {mountainBike}; //add all of your function names here that you need for the node mocha tests
+// module.exports = {mountainBike}; //add all of your function names here that you need for the node mocha tests
+
+
+
