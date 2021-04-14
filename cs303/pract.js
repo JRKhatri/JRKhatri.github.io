@@ -272,23 +272,23 @@
 // }
 // }
 
-const quiz = {};
-quiz.students = [{ sid: 10, answers: [{ qid: 2, ans: "b" }, { qid: 3, ans: "a" }, { qid: 1, ans: "b" }] },
-{ sid: 11, answers: [{ qid: 1, ans: "e" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }] },
-{ sid: 12, answers: [{ qid: 3, ans: "b" }, { qid: 2, ans: "a" }, { qid: 1, ans: "d" }] }];
+// const quiz = {};
+// quiz.students = [{ sid: 10, answers: [{ qid: 2, ans: "b" }, { qid: 3, ans: "a" }, { qid: 1, ans: "b" }] },
+// { sid: 11, answers: [{ qid: 1, ans: "e" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }] },
+// { sid: 12, answers: [{ qid: 3, ans: "b" }, { qid: 2, ans: "a" }, { qid: 1, ans: "d" }] }];
 
-quiz.key = [{ qid: 1, ans: "b" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }];
+// quiz.key = [{ qid: 1, ans: "b" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }];
 
-/**
- * 
- * @param {Object} ans1 is an answer object
- * @param {Object} ans2 is an answer object 
- * @returns {number} difference of the identifiers
- */
- function answerComparator(ans1, ans2) {
-  return ans1.qid > ans2.qid ? 1 : -1;
+// /**
+//  * 
+//  * @param {Object} ans1 is an answer object
+//  * @param {Object} ans2 is an answer object 
+//  * @returns {number} difference of the identifiers
+//  */
+//  function answerComparator(ans1, ans2) {
+//   return ans1.qid > ans2.qid ? 1 : -1;
 //IMPLEMENT THIS
-}
+//}
 
 
 /**
@@ -352,14 +352,22 @@ quiz.key = [{ qid: 1, ans: "b" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }];
 // console.log( counter.up() ); 
 // console.log( counter.up() ); 
 // console.log( counter.down() ); 
+ 
+// class A {
+// };
+// class A {
+  
+// }
+// class A{
+  
 
-let animal ={
-  eats : true
+//   }
+function A(){
+  return class{
+    
+  }
 }
 
-let  snoopy ={
-  name: "Snoopy",
-};
 
-console.log(snoopy.__proto__);
-//console.log(animal.__proto__);
+let abc = new class A();
+console.log(abc)
