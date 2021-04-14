@@ -299,25 +299,67 @@ quiz.key = [{ qid: 1, ans: "b" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }];
 * sort the student answers
 * compare them against key and add up matches
 */
-quiz.scoreStudent = function (sid) {
-//IMPLEMENT THIS
-let student = this.students.find(item => item.sid === sid);
-let studentAns = student.answers;
+// quiz.scoreStudent = function (sid) {
+// //IMPLEMENT THIS
+// let student = this.students.find(item => item.sid === sid);
+// let studentAns = student.answers;
 
-studentAns.sort(answerComparator);
+// studentAns.sort(answerComparator);
 
-let score = 0;
-let index=0;
+// let score = 0;
+// let index=0;
 
-for(let element of studentAns){
+// for(let element of studentAns){
   
-  if(element.ans === this.key[index].ans){
+//   if(element.ans === this.key[index].ans){
     
-      score++;
-  }
-  index++;
+//       score++;
+//   }
+//   index++;
+// }
+// return score;
+// };
+"use strict";
+
+// class Name {
+//   constructor(name){
+//     this.name = name;
+//   }
+//   sayHi(){console.log("HI")}
+// };
+
+
+// let per = new Name("Jyoti");
+// console.log(per);
+// console.log(Object.getOwnPropertyNames(per))
+
+// class Counter{
+//   constructor(){
+//   this._count = 0;
+//   }
+//   up() {
+//     this._count+= 1;
+//   return this._count;
+//   }
+//   down() {
+//     this._count -=1;
+//   return this._count;
+//   }
+//   }
+
+//   let counter = new Counter();
+
+// console.log( counter.up() ); 
+// console.log( counter.up() ); 
+// console.log( counter.down() ); 
+
+let animal ={
+  eats : true
 }
-return score;
+
+let  snoopy ={
+  name: "Snoopy",
 };
 
-
+console.log(snoopy.__proto__);
+//console.log(animal.__proto__);
