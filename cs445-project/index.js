@@ -1,12 +1,12 @@
 //This is the project javascript file in feature-jyoti branch.
 async function fetchSingleUser(id) {
-    let responseBody = await fetch('http://jsonplaceholder.typicode.com/users');
+    let responseBody = await fetch('https://jsonplaceholder.typicode.com/users');
     let json = await responseBody.json();
     return json[id];
 }
 
 async function fetchLocation(lat,lng){
-    const url = "http://www.mapquestapi.com/geocoding/v1/reverse?key=Q3wki3UwkqnZrHPKJDz69sSvAF4oijG5&location="+lat+','+lng;
+    const url = "https://www.mapquestapi.com/geocoding/v1/reverse?key=Q3wki3UwkqnZrHPKJDz69sSvAF4oijG5&location="+lat+','+lng;
     //consumer key: Q3wki3UwkqnZrHPKJDz69sSvAF4oijG5
     return fetch(url).then(response => response.json())     
 }
@@ -14,7 +14,7 @@ async function fetchLocation(lat,lng){
 
 async function displayPostComment(id){
     console.log(id);
-    const fetchComment = await fetch("http://jsonplaceholder.typicode.com/comments?postId="+id).then(response =>response.json());
+    const fetchComment = await fetch("https://jsonplaceholder.typicode.com/comments?postId="+id).then(response =>response.json());
     console.log(fetchComment[0].email);
     const commentDisplay = document.getElementById("postcomment"+id);
     fetchComment.forEach(element =>{
@@ -40,7 +40,7 @@ async function displayPostComment(id){
 async function displayUserPost(id){
     const userPost = document.getElementById("userpost");
     userPost.innerHTML = '';
-    const fetchPost = await fetch('http://jsonplaceholder.typicode.com/posts?userId='+id);
+    const fetchPost = await fetch('https://jsonplaceholder.typicode.com/posts?userId='+id);
     const postArray = await fetchPost.json();
 
     for(let i=0; i< postArray.length; i++){
